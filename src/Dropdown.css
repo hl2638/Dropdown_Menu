@@ -1,0 +1,57 @@
+/*
+* Author: Hongyi Liu
+* */
+.dropdown {
+    position: relative;
+    width: 20em;
+    padding: 1em;
+    margin: 1em;
+}
+
+
+.selected-items-container {
+    /*display: inline-block;*/
+    display: flex;
+    height: 1.5em;
+    vertical-align: middle;
+    border: 2px solid lightskyblue;
+}
+
+.dropdown-button {
+    flex: 1;
+    height: 100%;
+}
+
+.selected-items-box {
+    flex: 5;
+    text-align: left;
+    /*font-size: 20px;*/
+    /*padding: 0.5em;*/
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.option-list-item {
+    text-align: left;
+    margin: 0 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: #eeeeee;
+    /*background-color: dodgerblue;*/
+}
+
+.option-list {
+    position: absolute;
+    margin: 0 1em;
+    left: 0;
+    right: 0;
+    /*width: 100%;*/
+    list-style-type: none;
+    background-color: #eee;
+    font-size: 16px;
+    padding: 0px;
+    max-height: 20em;
+    overflow: auto;
+}

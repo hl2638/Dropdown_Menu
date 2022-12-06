@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+/*
+* Author: Hongyi Liu
+* */
+
 import './App.css';
+import Dropdown from "./Dropdown";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    const multipleTitle = "Multiple Dropdown";
+    const singleTitle = "Single Dropdown";
+    const largeMultipleTitle = "Large Multiple Dropdown (1000 items)";
+
+
+    const numOptions = 5, largeNumOptions = 1000;
+    let optionList = [], largeOptionList = [];
+    for (let i=1; i<=numOptions; i++) {
+        optionList.push("option " + i);
+    }
+    for (let i=1; i<=largeNumOptions; i++) {
+        largeOptionList.push("option " + i);
+    }
+
+
+    return (
+    <div className="App" style={{display: "flex"}}>
+        <Dropdown title={multipleTitle} optionList={optionList} multiple={true}/>
+        <Dropdown title={singleTitle} optionList={optionList} multiple={false}/>
+        <Dropdown title={largeMultipleTitle} optionList={largeOptionList} multiple={true}/>
     </div>
-  );
+    );
 }
 
 export default App;
